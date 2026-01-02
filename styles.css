@@ -1,0 +1,64 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: system-ui, sans-serif;
+}
+
+th {
+  background: #f5f5f5;
+  font-weight: 600;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 10px 12px;
+  text-align: left;
+}
+
+/* Attribute selctors for rows*/
+tr[class="read"] {
+  background-image: linear-gradient(to top, greenyellow, lawngreen);
+}
+
+tr[class="to-read"] {
+  background-image: linear-gradient(to left, lightsteelblue 0%,lightskyblue 5%, #00BFFF 60%);
+}
+
+tr[class="in-progress"] {
+  background-image: linear-gradient(135deg, orange, gold, navajowhite, #eee8aa);
+  /* You can also use degrees for linear-gradient. "to top"=0deg, "to bottom"= 180deg, "to right"= 90deg, "to left"=270deg, top-left to bottom-right= 135deg */
+}
+
+span {
+  display: inline-block;
+}
+
+tr[class="read"] span.status {
+  border: 1.5px solid green;
+  background-image: lightgreen;
+}
+
+tr[class="to-read"] span.status {
+  border: 1.5px solid blue;
+  background-image: lightcyan;
+}
+
+tr[class="in-progress"] span.status {
+  border: 1.5px solid orange;
+  background-image: gold;
+}
+
+span.status, span[class^="rate"] {
+  height: 100%;
+  width: 80%;
+  padding: 4px 8px;
+}
+
+span[class^="rate"] > span {
+  border: ;
+  border-radius: ;
+  margin:;
+  height:;
+  width:;
+  background-color:;
+}
