@@ -1,3 +1,20 @@
+body {
+  background: plum;
+}
+
+h1 {
+  text-align: center;
+  font-family: system-ui, sans-serif;
+  color: white;
+  text-shadow:
+    -1px -1px 0 black,
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black;
+  
+}
+
+/* Table styles */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -32,45 +49,43 @@ tr[class="in-progress"] {
 span {
   display: inline-block;
 }
-
+/* Different styles for different statuses */
 tr[class="read"] span.status {
-  border: 1.5px solid green;
+  border: 2px solid green;
   background-image: lightgreen;
 }
-
 tr[class="to-read"] span.status {
-  border: 1.5px solid blue;
+  border: 2px solid blue;
   background-image: lightcyan;
 }
-
 tr[class="in-progress"] span.status {
-  border: 1.5px solid orange;
+  border: 2px solid orange;
   background-image: gold;
 }
-
+/* Common styles for status and rating spans */
 span.status, span[class^="rate"] {
   height: 100%;
   width: 80%;
   padding: 4px 8px;
 }
-
+ /* Rating circles */
 span[class^="rate"] > span {
-  border: 2px solid grey;
+  border: 1.5px solid grey;
   border-radius: 50%;
   margin: 1.5px;
   height: 12px;
   width: 12px;
   background-color: lightgrey;
 }
-
+/* Different styles for different ratings */
 span[class*="one"] > span:first-child {
   background-image: linear-gradient(to top, orange 0%, gold 90%)
 }
-
+/* nth-child(-n+2) selects the first two children */
 span[class*="two"] > span:nth-child(-n+2) {
   background-image: linear-gradient(to top, orange 0%, gold 90%)
 }
-
+/* nth-child(-n+3) selects the first three children */
 span[class*="three"] > span {
   background-image: linear-gradient(to top, orange 0%, gold 90%)
 }
