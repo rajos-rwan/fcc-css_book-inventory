@@ -55,10 +55,22 @@ span.status, span[class^="rate"] {
 }
 
 span[class^="rate"] > span {
-  border: ;
-  border-radius: ;
-  margin:;
-  height:;
-  width:;
-  background-color:;
+  border: 2px solid grey;
+  border-radius: 50%;
+  margin: 1.5px;
+  height: 12px;
+  width: 12px;
+  background-color: lightgrey;
+}
+
+span[class*="one"] > span:first-child {
+  background-image: linear-gradient(to top, orange 0%, gold 90%)
+}
+
+span[class*="two"] > span:nth-child(-n+2) {
+  background-image: linear-gradient(to top, orange 0%, gold 90%)
+}
+
+span[class*="three"] > span {
+  background-image: linear-gradient(to top, orange 0%, gold 90%)
 }
